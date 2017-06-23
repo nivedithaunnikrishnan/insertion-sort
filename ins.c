@@ -1,7 +1,7 @@
 #include<stdio.h>
-int c,d,t,n;
+int c,d,t,n,i;
 
-int sort(int *a)
+int sort(int *a,int n)
 {
   for (c=1;c<= n-1;c++)
     {
@@ -25,11 +25,9 @@ int sort(int *a)
   printf("\n");
 }
 
-int main()
+int read(int *a)
 {
-  int i;
-  int a[10];
-  printf("Enter size\n");
+ printf("Enter size\n");
   scanf("%d",&n);
  printf("Enter elements\n");
   for(i=0;i<n;i++)
@@ -37,12 +35,18 @@ int main()
       scanf("%d",&a[i]);
     }
   printf("\n");
- 
+  return n;
+}
+
+int main()
+{
+  int a[10],n;
   for(i=0;i<n;i++)
     {
       printf("%d ",a[i]);
     }
   printf("\n");
+  n=read(a);
   sort(a);
   return 0;
 }
