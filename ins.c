@@ -1,16 +1,9 @@
 #include<stdio.h>
+int c,d,t,n;
 
-int main()
+int sort(int *a)
 {
-  int i,c,d,t;
-  int a[7]={4,23,43,38,15,10,30};
-  for(i=0;i<7;i++)
-    {
-      printf("%d ",a[i]);
-    }
-  printf("\n");
- 
-  for (c=1;c<= 6;c++)
+  for (c=1;c<= n-1;c++)
     {
       d=c;
       
@@ -25,10 +18,31 @@ int main()
   
   printf("Sorted list :\n");
   
-  for (c=0;c <= 6;c++)
+  for (c=0;c <= n-1;c++)
     {
-      printf("%d\n", a[c]);
-    }\
+      printf("%d ", a[c]);
+    }
+  printf("\n");
+}
+
+int main()
+{
+  int i;
+  int a[10];
+  printf("Enter size\n");
+  scanf("%d",&n);
+ printf("Enter elements\n");
+  for(i=0;i<n;i++)
+    {
+      scanf("%d",&a[i]);
+    }
+  printf("\n");
+ 
+  for(i=0;i<n;i++)
+    {
+      printf("%d ",a[i]);
+    }
+  printf("\n");
+  sort(a);
   return 0;
-  
 }
